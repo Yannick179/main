@@ -1,4 +1,5 @@
 #include <cs50.h>
+#include <ctype.h>
 #include <string.h>
 #include <stdio.h>
 
@@ -12,12 +13,20 @@ int main(void){
     int sentences = 0;
     string text = get_string("Text: ");
     for(int i = 0, length = strlen(text); i < length; i++){
-        if (text[i] == '.' ||
-        text[i] == '?' ||
-        text[i] == '!'){
+        char c = text[i];
+        if (c == '.' ||
+        c == '?' ||
+        c == '!'){
             sentences += 1;
         }
+        else if (isalpha(c) != 0){
+            letters += 1;
+        }
+        else if (c == ' '){
+            words += 1;
+        }
     }
+    words = words + 1;
     printf("%i words\n", words);
     printf("%i sentences\n", sentences);
     printf("%i letters\n", letters);
