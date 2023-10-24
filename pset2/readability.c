@@ -2,6 +2,7 @@
 #include <ctype.h>
 #include <string.h>
 #include <stdio.h>
+#include <math.h>
 
 //sentences(. or ? or !)
 //letters (isalpha)
@@ -27,8 +28,16 @@ int main(void){
         }
     }
     words = words + 1;
-    printf("%i words\n", words);
-    printf("%i sentences\n", sentences);
-    printf("%i letters\n", letters);
-
+    double letteraverage = (letters * 1.00 / words) * 100;
+    double sentenceaverage = (sentences * 1.00/ words) * 100;
+    int index = round(0.0588 * letteraverage - 0.296 * sentenceaverage - 15.8);
+    if (index < 1){
+        printf("Before Grade 1\n");
+    }
+    else if (index >= 16){
+        printf("Grade 16+\n");
+    }
+    else {
+        printf("Grade %i\n", index);
+    }
 }
