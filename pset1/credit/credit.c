@@ -6,7 +6,7 @@
 
 
 int get_card(string n);
-int checkluna(string n);
+int luhns_algorithm(string n);
 
 int main(void) 
 {
@@ -23,7 +23,7 @@ int main(void)
             }
         }
     } while (digit == false);
-    if (checkluna(number) == 0) {
+    if (luhns_algorithm(number) == 0) {
         get_card(number);
     }
     else {
@@ -51,7 +51,7 @@ int get_card(string n){
     }
 }
 
-int checkluna(string creditcard){
+int luhns_algorithm(string creditcard){
     int i = 0;
     int sum = 0;
     int digitcount = strlen(creditcard);
@@ -62,9 +62,13 @@ int checkluna(string creditcard){
             sum = sum + index_value;
         }
         else {
-            sum = sum + (2*index_value);
+            index_value = index_value *2;
+            if (index_value >= 10) {
+                index_value = index_value - 9;
+            }
+            sum = sum + (index_value);
         }
         i++;
     }
-    printf("%i\n", sum);
+    return (sum % 10);
 }
