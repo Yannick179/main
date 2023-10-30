@@ -65,7 +65,7 @@ string encrypt(string plaintext, string key){
                 ciphertext[i] = key[index];
                 ciphertext[i] = toupper(ciphertext[i]);
             }
-            else{
+            else {
                 int index = letter - 97;
                 ciphertext[i] = key[index];
             }

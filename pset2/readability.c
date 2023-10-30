@@ -4,10 +4,6 @@
 #include <stdio.h>
 #include <math.h>
 
-//sentences(. or ? or !)
-//letters (isalpha)
-//words
-
 int main(void){
     int words = 0;
     int letters = 0;
