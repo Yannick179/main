@@ -1,0 +1,11 @@
+sort1 uses: Bubble Sort
+
+How do you know?: best case (when sorted) is n, when i sorted the sorted50000.txt sort 1 was way faster than 3
+
+sort2 uses: Merge Sort
+
+How do you know?: sorts the fastest when there are 50000 inputs
+
+sort3 uses: selectionsort
+
+How do you know?: because first is bubblesort and second is megesort, 3rd has to be selection. Runtime of it was always about the same no matter the case (when length of the to be sorted items was the same)
