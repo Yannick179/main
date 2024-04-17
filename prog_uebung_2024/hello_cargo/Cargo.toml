@@ -1,0 +1,27 @@
+[package]
+name = "hello_cargo"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rust-analyzer = "0.0.1"
+
+[profile.opt0oc]
+inherits = "release"
+overflow-checks = true
+opt-level = 0
+
+[profile.opt1oc]
+inherits = "release"
+overflow-checks = true
+opt-level = 1
+
+[profile.opt2oc]
+inherits = "release"
+overflow-checks = true
+opt-level = 0
+
+[profile.opt3oc]
+inherits = "release"
+overflow-checks = true
+opt-level = 3
