@@ -1,6 +1,12 @@
+package koenigreich;
+
 public class Leibeigener extends Bauer {
-    @Override
     public int zuVersteuerndesEinkommen() {
-        return einkommen-12;
+        // Vorschrift (5)
+        int betrag = einkommen - 12;
+        if (betrag < 0) {
+            return 0;
+        }
+        return betrag;
     }
 }

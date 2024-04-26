@@ -21,5 +21,7 @@
         // Nachricht an die Library, dass die Books aufgenommen werden sollen
         lib.register(buch1);
         lib.register(buch2);
+        lib.search("Harry Potter");
+        
     }
 }
